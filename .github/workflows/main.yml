@@ -3,7 +3,7 @@ name: Pipeline de déploiement
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
