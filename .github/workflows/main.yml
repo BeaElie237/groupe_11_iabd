@@ -38,16 +38,16 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: "🔧 Prétraitement des données"
-        run: python Scripts/preprocessing.py
+        run: python script/preprocessing.py
 
       - name: "🤖 Entraînement des modèles"
-        run: python Scripts/training.py
+        run: python script/training.py
 
       - name: "📊 Évaluation des modèles"
-        run: python Scripts/evaluation.py
+        run: python script/evaluation.py
 
       - name: "📦 Archivage et téléversement du modèle et de la documentation"
         run: zip -r output.zip model
 
       - name: "📧 Envoi d'un email avec le modèle et la documentation"
-        run: python Scripts/send_email.py
+        run: python script/send_email.py
