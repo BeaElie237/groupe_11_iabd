@@ -14,7 +14,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class EmailSender:
-    def init(self, smtp_user, smtp_pass, recipients, subject, body):
+    def __init__(self, smtp_user, smtp_pass, recipients, subject, body):
         self.smtp_user = smtp_user
         self.smtp_pass = smtp_pass
         self.recipients = recipients
